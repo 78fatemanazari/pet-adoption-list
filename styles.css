@@ -39,7 +39,7 @@ body{
 }
 .hero h1{
   font-weight: normal;
-  font-size: 6rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -64,17 +64,32 @@ body{
   margin: 4px;
 }
 
+.filter-nav a:hover{
+  background-color: rgb(252, 106, 252);
+}
+  
+.filter-nav .active{
+  background-color: #7c109a;
+  color: #fff;
+}
+
+.filter-nav .active:hover{
+  background-color: #7c109a;
+  cursor: default;
+}
+
 .animals{
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 20px;
 }
 
 .animal-card{
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 100%;
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .animal-card-photo{
@@ -127,4 +142,26 @@ body{
 
 .primary-btn:hover{
   background: linear-gradient(rgb(255, 14, 135), rgb(255, 22, 255));
+}
+
+.only-large-screen{
+  display: none;
+}
+
+@media screen and (min-width: 768px){
+  .animal-card{
+    grid-template-columns: 200px 1fr;
+  }
+
+  .hero h1{
+    font-size: 6rem;
+  }
+
+  .only-large-screen{
+    display: inline;
+  }
+
+  .animals{
+    margin: 0 auto;
+  }
 }
